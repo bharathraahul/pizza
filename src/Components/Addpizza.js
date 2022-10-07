@@ -8,7 +8,7 @@ const AddPizza = () => {
     description: "",
     price: " "
   };
-  const [pizza, setPizza] = useState(initialPizzaState);
+  const [pizza, setPizza] = useState(initialState);
   const [submitted, setSubmitted] = useState(false);
 
   const handleInputChange = event => {
@@ -19,16 +19,16 @@ const AddPizza = () => {
   const savePizza = () => {
     var data = {
       title: pizza.title,
-      description: tutorial.description
+      description: pizza.description
     };
 
-    TutorialDataService.create(data)
+    PizzaDataService.create(data)
       .then(response => {
         setPizza({
           id: response.data.id,
           title: response.data.title,
           description: response.data.description,
-          published: response.data.published
+          price: response.data.price
         });
         setSubmitted(true);
         console.log(response.data);
@@ -38,8 +38,8 @@ const AddPizza = () => {
       });
   };
 
-  const newTutorial = () => {
-    setTutorial(initialTutorialState);
+  const newPizza = () => {
+    setPizza(initialState);
     setSubmitted(false);
   };
 
@@ -48,7 +48,7 @@ const AddPizza = () => {
       {submitted ? (
         <div>
           <h4>You submitted successfully!</h4>
-          <button className="btn btn-success" onClick={newTutorial}>
+          <button className="btn btn-success" onClick={newPizza}>
             Add
           </button>
         </div>
@@ -61,7 +61,7 @@ const AddPizza = () => {
               className="form-control"
               id="title"
               required
-              value={tutorial.title}
+              value={pizza.title}
               onChange={handleInputChange}
               name="title"
             />
@@ -74,13 +74,13 @@ const AddPizza = () => {
               className="form-control"
               id="description"
               required
-              value={tutorial.description}
+              value={pizza.description}
               onChange={handleInputChange}
               name="description"
             />
           </div>
 
-          <button onClick={saveTutorial} className="btn btn-success">
+          <button onClick={savePizza} className="btn btn-success">
             Submit
           </button>
         </div>
