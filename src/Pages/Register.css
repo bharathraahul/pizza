@@ -1,0 +1,76 @@
+.container {
+    background: url("" );
+    height: 100vh;
+    /* background-position: 100px 0px; */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin: 3.2rem 0;
+  }
+  a {
+    color: #333;
+  }
+  a:hover {
+    color: #161414;
+    text-decoration: none;
+  }
+  .card {
+    background-color: #db6c0a;
+    border: 0.1rem solid #e1530c;
+    padding: 0 3.2rem;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .form-control:focus {
+    color: #0b0c0c;
+    background-color: #e1ddec;
+    border: inset 0.5rem solid #da5767;
+    outline: 1;
+    box-shadow: none;
+  }
+
+  input {
+    width: 25rem;
+    padding: 1rem 2rem;
+    font-family: "Work Sans", sans-serif;
+    outline: 0;
+    border: none;
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1.2rem;
+    background-color: #df8c96;
+    border-color: #e61029;
+    margin-bottom: 3.2rem;
+  }
+
+  .btn-primary:hover {
+    background: #da5767;
+    border: inset 0.2rem solid #da5767;
+    transition: 0.3s;
+  }
+
+  .Login{
+    background-position: left;
+    padding: 0.6rem 1.2rem;
+    background-color: #df8c96;
+    border-color: #e7c6c9;
+    margin-bottom: 3.2rem;
+    
+  }
+  .Login:hover {
+    background: #da5767;
+    border: inset 0.2rem solid #da5767;
+    transition: 0.3s;
+  }
